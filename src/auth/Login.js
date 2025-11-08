@@ -79,9 +79,14 @@ const Login = ({ formData, handleInputChange, handleSubmit, errorMsg }) => {
         <div className="text-center mt-3">
           <small className="text-secondary">
             Forgot password?{" "}
-            <a href="#" className="text-decoration-none text-primary">
+            <button
+              onClick={() => {
+                /* TODO: Add reset password handler */
+              }}
+              className="btn btn-link btn-sm text-primary p-0 text-decoration-none border-0"
+            >
               Reset
-            </a>
+            </button>
           </small>
         </div>
       </div>

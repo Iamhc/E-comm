@@ -5,12 +5,14 @@ const Navbar = ({ userData, logout }) => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
       <div className="container">
         {/* Brand */}
-        <a
-          className="navbar-brand fw-bold fs-4 d-flex align-items-center"
-          href="#"
+        <button
+          className="navbar-brand fw-bold fs-4 d-flex align-items-center btn btn-link border-0 text-white p-0"
+          onClick={() => {
+            /* TODO: Add home/reset handler */
+          }}
         >
           🛍️ <span className="ms-2">ShopHub</span>
-        </a>
+        </button>
 
         {/* Toggler */}
         <button
