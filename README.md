@@ -1,4 +1,10 @@
-<img width="1920" height="1080" alt="Screenshot (1007)" src="https://github.com/user-attachments/assets/393a779b-f29a-4970-8012-c019e8e98b68" /><img width="1920" height="1080" alt="Screenshot (1009)" src="https://github.com/user-attachments/assets/aae7b07f-e68d-49a0-8b9c-0904838ffb23" /># 🛍️ ShopHub - E-Commerce Platform
+<img width="1897" height="938" alt="Screenshot (1009)" src="https://github.com/user-attachments/assets/6aa566bf-b0b0-4354-a335-a35e1c7da844" />
+<img width="1920" height="951" alt="Screenshot (1007)" src="https://github.com/user-attachments/assets/e04d8cb0-af1d-4ece-96db-2bd687b07650" />
+
+
+<img width="1904" height="961" alt="Screenshot (1008)" src="https://github.com/user-attachments/assets/e0929503-4466-415f-a3eb-74f3de6771ab" />
+
+Shophub
 
 ShopHub is a modern e-commerce web application built with React and Bootstrap, offering a seamless shopping experience with features like user authentication, product browsing, and shopping cart management.
 
