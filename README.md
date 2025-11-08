@@ -1,3 +1,50 @@
+# 🛍️ ShopHub - E-Commerce Platform
+
+ShopHub is a modern e-commerce web application built with React and Bootstrap, offering a seamless shopping experience with features like user authentication, product browsing, and shopping cart management.
+
+## 🚀 Features
+
+- **User Authentication**
+  - Secure login system
+  - Demo account access available
+  - Password reset functionality
+
+- **Product Management**
+  - Browse product catalog
+  - View detailed product information
+  - Add products to shopping cart
+  - Product category navigation
+
+- **Shopping Cart**
+  - Add/remove items
+  - Update quantities
+  - View cart summary
+
+- **Responsive Design**
+  - Mobile-friendly interface
+  - Bootstrap-based modern UI
+  - Consistent dark theme
+
+## 🛠️ Tech Stack
+
+- **Frontend**
+  - React 18
+  - Bootstrap 5.3
+  - CSS3
+
+- **Backend**
+  - Express.js
+  - Node.js
+  - REST API
+
+## 🔑 Demo Access
+
+You can use the following credentials to test the application:
+- **Email:** demo@demo
+- **Password:** demo
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
