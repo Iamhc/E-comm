@@ -1,40 +1,92 @@
-import React from 'react';
+import React from "react";
+
 const Login = ({ formData, handleInputChange, handleSubmit, errorMsg }) => {
-  const centeredCard = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '90vh',
-  }
   return (
-    <>
-      <div className='container'>
-        <div className="row" style={centeredCard}>
-          <div class="col-md-6 col-sm-3">
-            <div className="card bg-dark text-white shadow">
-              <div className="card-header"><strong>Apparel</strong></div>
-              <div className="card-body">
-                <div className="col-md-6 bg-danger text-center">
-                  <p className='fs-6'>*Instructions : Email - demo@demo | Password - demo</p>
-                </div>
-                <form onSubmit={handleSubmit}>
-                  <div className="mb-3 mt-3">
-                    <label for="email" className="form-label">Email:</label>
-                    <input type="email" name="userEmail" className="form-control" id="email" placeholder="Enter email" value={formData.userEmail} onChange={handleInputChange} />
-                  </div>
-                  <div className="mb-3">
-                    <label for="pwd" className="form-label">Password:</label>
-                    <input type="password" name='userPwd' className="form-control" id="pwd" placeholder="Enter password" value={formData.userPwd} onChange={handleInputChange} />
-                  </div>
-                  <div className='text-danger mb-2'>{errorMsg}</div>
-                  <button type="submit" className="btn btn-primary">Submit</button>
-                </form>
-              </div>
-            </div>
+    <div
+      className="container-fluid bg-dark d-flex justify-content-center align-items-center"
+      style={{ minHeight: "100vh" }}
+    >
+      <div
+        className="card text-white shadow-lg border-0 p-4 mx-3"
+        style={{
+          width: "100%",
+          maxWidth: "400px",
+          backgroundColor: "#1e1e2f",
+          borderRadius: "12px",
+        }}
+      >
+        <div className="text-center mb-3">
+          <h3 className="fw-bold mb-1">🛍️ ShopHub</h3>
+          <p className="text-secondary small mb-0">Sign in to continue</p>
+        </div>
+
+        <div
+          className="alert alert-danger py-2 text-center small mb-4 shadow-sm"
+          role="alert"
+        >
+          <strong>Demo:</strong> Email: demo@demo | Password: demo
+        </div>
+
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label text-secondary mb-1">
+              Email address
+            </label>
+            <input
+              type="email"
+              name="userEmail"
+              id="email"
+              className="form-control bg-transparent text-white border-secondary"
+              placeholder="Enter your email"
+              value={formData.userEmail}
+              onChange={handleInputChange}
+              required
+            />
           </div>
+
+          <div className="mb-3">
+            <label htmlFor="pwd" className="form-label text-secondary mb-1">
+              Password
+            </label>
+            <input
+              type="password"
+              name="userPwd"
+              id="pwd"
+              className="form-control bg-transparent text-white border-secondary"
+              placeholder="Enter your password"
+              value={formData.userPwd}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+
+          {errorMsg && (
+            <div className="text-danger text-center small mb-3 fw-semibold">
+              {errorMsg}
+            </div>
+          )}
+
+          <div className="d-grid">
+            <button
+              type="submit"
+              className="btn btn-primary fw-semibold shadow-sm py-2"
+            >
+              Sign In
+            </button>
+          </div>
+        </form>
+
+        <div className="text-center mt-3">
+          <small className="text-secondary">
+            Forgot password?{" "}
+            <a href="#" className="text-decoration-none text-primary">
+              Reset
+            </a>
+          </small>
         </div>
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
+
 export default Login;

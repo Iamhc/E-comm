@@ -1,44 +1,76 @@
-import React from 'react';
+import React from "react";
 
+const Navbar = ({ userData, logout }) => {
+  return (
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
+      <div className="container">
+        {/* Brand */}
+        <a
+          className="navbar-brand fw-bold fs-4 d-flex align-items-center"
+          href="#"
+        >
+          🛍️ <span className="ms-2">ShopHub</span>
+        </a>
 
-const Navbar = ({userData, logout}) => {
-   
+        {/* Toggler */}
+        <button
+          className="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
+        {/* Navbar Links */}
+        <div
+          className="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul className="navbar-nav align-items-center gap-lg-3">
+            {/* Greeting */}
+            <li className="nav-item">
+              <span className="nav-link text-light fw-semibold">
+                👋 Hello, {userData?.userName || "Guest"}
+              </span>
+            </li>
 
-   
-    return (
-       
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
-            <div className="container">
-                <a className="navbar-brand" href="#"><strong>Apparel</strong></a>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul className="navbar-nav">
-                        {/* Add any additional navigation items here */}
-                        <li className="nav-item">
-                            <a className="nav-link" href="#user">
-                                Hello, {userData.userName}
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#cart">
-                                <i className="fas fa-shopping-cart"></i> {/* Assuming you're using Font Awesome for cart icon */}
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href='#logout'  onClick={logout}>
-                                <i className="text-danger fas fa-power-off"></i> {/* Assuming you're using Font Awesome for cart icon */}
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-       
-    );
+            {/* Cart Icon */}
+            <li className="nav-item">
+              <a
+                className="nav-link position-relative"
+                href="#cart"
+                title="View Cart"
+              >
+                <i className="fas fa-shopping-cart fa-lg"></i>
+                {/* Optional badge for items */}
+                <span
+                  className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                  style={{ fontSize: "0.65rem" }}
+                >
+                  3
+                </span>
+              </a>
+            </li>
+
+            {/* Logout Button */}
+            <li className="nav-item">
+              <button
+                className="btn btn-sm btn-outline-danger fw-semibold ms-lg-2"
+                onClick={logout}
+                title="Logout"
+              >
+                <i className="fas fa-power-off me-1"></i> Logout
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
 };
-
 
 export default Navbar;
